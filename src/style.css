@@ -1,0 +1,19 @@
+/* @import "@/assets/vendor/bootstrap/bootstrap.min.css"; */
+
+        /* <!-- FAVICON --; */
+        /* @import "@/assets/images/favicon.png"; */
+
+        /* FONTS  */
+       @import "@/assets/fonts/flaticon/flaticon.css";
+       @import "@/assets/fonts/icofont/icofont.min.css";
+       @import "@/assets/fonts/fontawesome/fontawesome.min.css";
+
+        /* <!-- VENDOR --; */
+       @import "@/assets/vendor/venobox/venobox.min.css";
+       @import "@/assets/vendor/slickslider/slick.min.css";
+       @import "@/assets/vendor/niceselect/nice-select.min.css";
+       @import "@/assets/vendor/bootstrap/bootstrap.min.css";
+
+        /* <!-- CUSTOM --; */
+       @import "@/assets/css/main.css";
+       @import "@/assets/css/home-standard.css";
