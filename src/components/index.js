@@ -18,3 +18,4 @@ export { default as Testimonial } from "@/components/Testimonial/Testimonial.vue
 export { default as Blog } from "@/components/Blog/Blog.vue";
 export { default as Newsletter } from "@/components/Newsletter/Newsletter.vue";
 export { default as Footer } from "@/components/Footer/Footer.vue";
+export { default as ProductCard } from "@/components/Product/ProductCard.vue";

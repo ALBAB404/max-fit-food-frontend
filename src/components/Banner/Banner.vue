@@ -96,7 +96,6 @@ onMounted(() => {
             <div class="row">
               <div class="col-lg-12">
                 <div class="home-grid-slider slider-dots">
-                  {{ slider.id }}
                    <swiper
                       :spaceBetween="30"
                       :loop="true"
@@ -111,25 +110,8 @@ onMounted(() => {
                       class="mySwiper"
                     >
                       <swiper-slide v-for="(slider, index) in sliders" :key="index">
-                          <div class="banner-wrap bg1">
-                          <div class="row align-items-center">
-                            <div class="col-md-6 col-lg-6">
-                              <div class="banner-content">
-                                <h2>
-                                  {{ slider.title }}.
-                                </h2>
-                                <a href="#" class="btn btn-inline">
-                                  <i class="fas fa-shopping-basket"></i>
-                                  <span>shop now</span>
-                                </a>
-                              </div>
-                            </div>
-                            <div class="col-md-6 col-lg-6">
-                              <div class="banner-image">
-                                <img :src="slider.image" alt="" />
-                              </div>
-                            </div>
-                          </div>
+                        <div class="banner-image">
+                          <img :src="slider.image" alt="" />
                         </div>
                       </swiper-slide>
                     </swiper>
