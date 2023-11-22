@@ -1,9 +1,9 @@
 <script setup>
 // All Import File  Code Is Here......................................................................................................
-
+import { ref } from 'vue';
 
 // All Variable  Code Is Here.....................................................................................................
-
+const imageUrl = ref('images/promo/home/9.png');
 // API Calling Code Is Here.....................................................................................................
 
 // All Function  Code Is Here.....................................................................................................
@@ -17,8 +17,7 @@
           <div class="col-lg-12">
             <div
               class="promo-content"
-              style="background: url(images/promo/home/09.jpg) no-repeat center"
-            >
+              style="background: url(http://localhost:5173/src/assets/images/promo/home/9.png)no-repeat center center / cover">
               <h3>only <span>$45</span> per kilogram</h3>
               <h2>fresh Blueberries</h2>
               <a href="shop-4column.html" class="btn btn-inline">

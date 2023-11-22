@@ -32,24 +32,6 @@ onMounted(() => {
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="countdown deals-clock" data-countdown="2021/12/31">
-              <span class="countdown-time"
-                ><span>00</span><small>days</small></span
-              >
-              <span class="countdown-time"
-                ><span>00</span><small>hours</small></span
-              >
-              <span class="countdown-time"
-                ><span>00</span><small>minutes</small></span
-              >
-              <span class="countdown-time"
-                ><span>00</span><small>seconds</small></span
-              >
-            </div>
-          </div>
-        </div>
         <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4">
           <div class="col" v-for="(product, index) in recentProducts" :key="index">
             <ProductCard :product="product"/>

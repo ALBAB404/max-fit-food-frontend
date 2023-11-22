@@ -1,5 +1,5 @@
 <script setup>
-import { CategorySideBar, CartSideBar, NavSideBar, MobileMenu,  Blog, ProductView, PromoPart, Banner, IntroPart, DealsPart, FeatureSection, NewItem, NichePart, CategoryCarousel, Brand, Testimonial } from '@/components'
+import { CategorySideBar, CartSideBar, NavSideBar, MobileMenu,  Blog, ProductView, PromoPart, Banner, IntroPart, DealsPart, NewItem, Brand } from '@/components'
 
 // All Variable  Code Is Here.....................................................................................................
 
@@ -73,9 +73,43 @@ import { CategorySideBar, CartSideBar, NavSideBar, MobileMenu,  Blog, ProductVie
         =======================================-->
 
     <!--=====================================
-                    FEATURED PART START
+                    FEATURE PART END
         =======================================-->
-    <FeatureSection />
+
+    <!--=====================================
+                    PROMO PART START
+        =======================================-->
+    <PromoPart />
+    <!--=====================================
+                    PROMO PART END
+        =======================================-->
+    <!--=====================================
+                    DEALS PART START
+        =======================================-->
+    <DealsPart />
+    <!--=====================================
+                    DEALS PART END
+        =======================================-->
+
+    <!--=====================================
+                    FEATURE PART END
+        =======================================-->
+
+    <!--=====================================
+                    PROMO PART START
+        =======================================-->
+    <PromoPart />
+    <!--=====================================
+                    PROMO PART END
+        =======================================-->
+    <!--=====================================
+                    DEALS PART START
+        =======================================-->
+    <DealsPart />
+    <!--=====================================
+                    DEALS PART END
+        =======================================-->
+
     <!--=====================================
                     FEATURE PART END
         =======================================-->
@@ -97,20 +131,7 @@ import { CategorySideBar, CartSideBar, NavSideBar, MobileMenu,  Blog, ProductVie
         =======================================-->
 
     <!--=====================================
-                    NICHE PART START
-        =======================================-->
-    <NichePart />
-    <!--=====================================
-                    NICHE PART END
-        =======================================-->
-
-    <!--=====================================
                     CATEGORY PART START
-        =======================================-->
-
-    <CategoryCarousel />
-    <!--=====================================
-                    CATEGORY PART END
         =======================================-->
 
     <!--=====================================
@@ -119,14 +140,6 @@ import { CategorySideBar, CartSideBar, NavSideBar, MobileMenu,  Blog, ProductVie
     <Brand />
     <!--=====================================
                     BRAND PART END
-        =======================================-->
-
-    <!--=====================================
-                  TESTIMONIAL PART START 
-        =======================================-->
-    <Testimonial />
-    <!--=====================================
-                   TESTIMONIAL PART END
         =======================================-->
 
     <!--=====================================

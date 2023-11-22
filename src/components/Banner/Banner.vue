@@ -121,14 +121,14 @@ onMounted(() => {
               <div class="col-md-6 col-lg-6">
                 <div class="banner-promo">
                   <a href="#"
-                    > <img src="@/assets/images/promo/home/04.jpg" alt="promo"
+                    > <img src="@/assets/images/promo/home/4.png" alt="promo"
                   /></a>
                 </div>
               </div>
               <div class="col-md-6 col-lg-6">
                 <div class="banner-promo">
                   <a href="#"
-                    > <img src="@/assets/images/promo/home/05.jpg" alt="promo"
+                    > <img src="@/assets/images/promo/home/5.png" alt="promo"
                   /></a>
                 </div>
               </div>
