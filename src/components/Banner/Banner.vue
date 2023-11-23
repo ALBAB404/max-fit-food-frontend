@@ -97,7 +97,8 @@ onMounted(() => {
               <div class="col-lg-12">
                 <div class="home-grid-slider slider-dots">
                    <swiper
-                      :spaceBetween="30"
+                      :slidesPerView="1"
+                      :sliderPerGroup="1"
                       :loop="true"
                       :pagination="{
                         clickable: true,

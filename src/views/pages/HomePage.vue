@@ -1,7 +1,23 @@
 <script setup>
-import { CategorySideBar, CartSideBar, NavSideBar, MobileMenu,  Blog, ProductView, PromoPart, Banner, IntroPart, DealsPart, NewItem, Brand } from '@/components'
-
+import { CategorySideBar, CartSideBar,ProductCard, NavSideBar, MobileMenu,  Blog, ProductView, PromoPart, Banner, IntroPart, NewItem, Brand } from '@/components'
+import { ref, onMounted } from 'vue';
+import { storeToRefs } from 'pinia';
+// product data fetch 
+import {useProduct} from '@/stores'
 // All Variable  Code Is Here.....................................................................................................
+const product = useProduct();
+const { recentProducts, topProducts, featureProducts } = storeToRefs(product);
+
+// API Calling Code Is Here.....................................................................................................
+
+
+// All Function  Code Is Here.....................................................................................................
+
+onMounted(() => {
+  product.getRecentProductData();
+  product.getTopProductData();
+  product.getFeatureProductData();
+})
 
 
 </script>
@@ -55,7 +71,13 @@ import { CategorySideBar, CartSideBar, NavSideBar, MobileMenu,  Blog, ProductVie
     <!--=====================================
                     BANNER PART END
         =======================================-->
-
+   <!--=====================================
+                    BRAND PART START
+        =======================================-->
+    <Brand />
+    <!--=====================================
+                    BRAND PART END
+        =======================================-->
     <!--=====================================
                     INTRO PART START
         =======================================-->
@@ -65,81 +87,99 @@ import { CategorySideBar, CartSideBar, NavSideBar, MobileMenu,  Blog, ProductVie
         =======================================-->
 
     <!--=====================================
-                    DEALS PART START
+                    Recent Product START
         =======================================-->
-    <DealsPart />
+     <section class="section deals-part">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-heading">
+              <h2>Recent Product</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4">
+          <div class="col" v-for="(product, index) in recentProducts.result" :key="index">
+            <ProductCard :product="product" :type="'recent'"/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-btn-25">
+              <a href="shop-4column.html" class="btn btn-inline">
+                <i class="fas fa-eye"></i>
+                <span>view all deals</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+     </section>
     <!--=====================================
-                    DEALS PART END
-        =======================================-->
-
-    <!--=====================================
-                    FEATURE PART END
-        =======================================-->
-
-    <!--=====================================
-                    PROMO PART START
-        =======================================-->
-    <PromoPart />
-    <!--=====================================
-                    PROMO PART END
-        =======================================-->
-    <!--=====================================
-                    DEALS PART START
-        =======================================-->
-    <DealsPart />
-    <!--=====================================
-                    DEALS PART END
-        =======================================-->
-
-    <!--=====================================
-                    FEATURE PART END
-        =======================================-->
-
-    <!--=====================================
-                    PROMO PART START
-        =======================================-->
-    <PromoPart />
-    <!--=====================================
-                    PROMO PART END
-        =======================================-->
-    <!--=====================================
-                    DEALS PART START
-        =======================================-->
-    <DealsPart />
-    <!--=====================================
-                    DEALS PART END
-        =======================================-->
-
-    <!--=====================================
-                    FEATURE PART END
+                    Recent Product END
         =======================================-->
 
     <!--=====================================
                     PROMO PART START
         =======================================-->
-    <PromoPart />
+    <PromoPart  :image="'http://localhost:5173/src/assets/images/promo/home/9.png'"/>
     <!--=====================================
                     PROMO PART END
         =======================================-->
+    <!--=====================================
+                    Top Product START
+        =======================================-->
+      <section class="section deals-part">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-heading">
+              <h2>Top Product</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4">
+          <div class="col" v-for="(product, index) in topProducts.result" :key="index">
+            <ProductCard :product="product" :type="'Top'"/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-btn-25">
+              <a href="shop-4column.html" class="btn btn-inline">
+                <i class="fas fa-eye"></i>
+                <span>view all deals</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+     </section>
+    <!--=====================================
+                    Top Product END
+        =======================================-->
 
     <!--=====================================
-                    NEW ITEM PART START
+                    PROMO PART START
         =======================================-->
-    <NewItem />
+    <PromoPart :image="'http://localhost:5173/src/assets/images/promo/home/1.png'"/>
     <!--=====================================
-                    NEW ITEM PART END
+                    PROMO PART END
+        =======================================-->
+    <!--=====================================
+                    Slider Feature Product START
+        =======================================-->
+     <NewItem :featureProducts="featureProducts"/>
+    <!--=====================================
+                    Slider Feature Product END
         =======================================-->
 
     <!--=====================================
-                    CATEGORY PART START
+                    PROMO PART START
         =======================================-->
-
+    <PromoPart :image="'http://localhost:5173/src/assets/images/promo/home/2.png'"/>
     <!--=====================================
-                    BRAND PART START
-        =======================================-->
-    <Brand />
-    <!--=====================================
-                    BRAND PART END
+                    PROMO PART END
         =======================================-->
 
     <!--=====================================

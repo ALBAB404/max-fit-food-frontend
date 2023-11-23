@@ -50,7 +50,6 @@ const modules = ref([Pagination,Autoplay]);
                       :autoplay="{
                         delay: 2000,
                       }"
-                      :modules="newSlide"
                       class="mySwiper"
                     >
                 <swiper-slide>

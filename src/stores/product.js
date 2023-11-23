@@ -10,6 +10,8 @@ export const useProduct = defineStore('product', {
   state: () => ({ 
     products: {},
     recentProducts: {},
+    topProducts: {},
+    featureProducts: {},
     loading: false,
   }),
   
@@ -38,7 +40,45 @@ export const useProduct = defineStore('product', {
       try {
         const res = await axiosInstance.get("/recent-products");
         if (res.status === 200) {
-            this.recentProducts = res.data.result
+            this.recentProducts = res.data
+          return new Promise((resolve) => {
+            resolve(res.data);
+          });
+        }
+      } catch (error) {
+        if (error.response.data) {
+          return new Promise((reject) => {
+            reject(error.response.data);
+          });
+        }
+      }
+    },
+
+
+    async getTopProductData() {
+      try {
+        const res = await axiosInstance.get("/top-products");
+        if (res.status === 200) {
+            this.topProducts = res.data
+          return new Promise((resolve) => {
+            resolve(res.data);
+          });
+        }
+      } catch (error) {
+        if (error.response.data) {
+          return new Promise((reject) => {
+            reject(error.response.data);
+          });
+        }
+      }
+    },
+
+
+    async getFeatureProductData() {
+      try {
+        const res = await axiosInstance.get("/feature-products");
+        if (res.status === 200) {
+            this.featureProducts = res.data
           return new Promise((resolve) => {
             resolve(res.data);
           });

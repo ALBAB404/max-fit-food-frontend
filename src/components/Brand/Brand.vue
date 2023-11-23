@@ -1,7 +1,9 @@
 <script setup>
 // All Import File  Code Is Here......................................................................................................
-import { ref } from "vue";
-
+import { ref, onMounted } from 'vue';
+import { storeToRefs } from 'pinia';
+// product data fetch 
+import {useBrand} from '@/stores'
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
 // Import Swiper styles
@@ -12,9 +14,14 @@ import "swiper/css/navigation";
 import { Pagination, Autoplay, Navigation } from "swiper/modules";
 
 // All Variable  Code Is Here.....................................................................................................
+const brand = useBrand();
+const { brands } = storeToRefs(brand);
 const newSlide = ref([Navigation]);
 const modules = ref([Pagination, Autoplay]);
 // API Calling Code Is Here.....................................................................................................
+onMounted(() => {
+  brand.getData();
+})
 
 // All Function  Code Is Here.....................................................................................................
 </script>
@@ -42,80 +49,10 @@ const modules = ref([Pagination, Autoplay]);
             :modules="newSlide"
             class="mySwiper"
           >
-            <swiper-slide>
+            <swiper-slide v-for="(brand, index) in brands.result" :key="index">
               <div class="brand-wrap">
                 <div class="brand-media">
-                  <img src="@/assets/images/brand/01.jpg" alt="brand" />
-                  <div class="brand-overlay">
-                    <a href="brand-single.html"><i class="fas fa-link"></i></a>
-                  </div>
-                </div>
-                <div class="brand-meta">
-                  <h4>natural greeny</h4>
-                  <p>(45 items)</p>
-                </div>
-              </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div class="brand-wrap">
-                <div class="brand-media">
-                  <img src="@/assets/images/brand/01.jpg" alt="brand" />
-                  <div class="brand-overlay">
-                    <a href="brand-single.html"><i class="fas fa-link"></i></a>
-                  </div>
-                </div>
-                <div class="brand-meta">
-                  <h4>natural greeny</h4>
-                  <p>(45 items)</p>
-                </div>
-              </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div class="brand-wrap">
-                <div class="brand-media">
-                  <img src="@/assets/images/brand/01.jpg" alt="brand" />
-                  <div class="brand-overlay">
-                    <a href="brand-single.html"><i class="fas fa-link"></i></a>
-                  </div>
-                </div>
-                <div class="brand-meta">
-                  <h4>natural greeny</h4>
-                  <p>(45 items)</p>
-                </div>
-              </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div class="brand-wrap">
-                <div class="brand-media">
-                  <img src="@/assets/images/brand/01.jpg" alt="brand" />
-                  <div class="brand-overlay">
-                    <a href="brand-single.html"><i class="fas fa-link"></i></a>
-                  </div>
-                </div>
-                <div class="brand-meta">
-                  <h4>natural greeny</h4>
-                  <p>(45 items)</p>
-                </div>
-              </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div class="brand-wrap">
-                <div class="brand-media">
-                  <img src="@/assets/images/brand/01.jpg" alt="brand" />
-                  <div class="brand-overlay">
-                    <a href="brand-single.html"><i class="fas fa-link"></i></a>
-                  </div>
-                </div>
-                <div class="brand-meta">
-                  <h4>natural greeny</h4>
-                  <p>(45 items)</p>
-                </div>
-              </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div class="brand-wrap">
-                <div class="brand-media">
-                  <img src="@/assets/images/brand/01.jpg" alt="brand" />
+                  <img :src="brand.image" alt="brand" />
                   <div class="brand-overlay">
                     <a href="brand-single.html"><i class="fas fa-link"></i></a>
                   </div>
@@ -127,16 +64,6 @@ const modules = ref([Pagination, Autoplay]);
               </div>
             </swiper-slide>
           </swiper>
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="section-btn-50">
-              <a href="brand-list.html" class="btn btn-outline">
-                <i class="fas fa-eye"></i>
-                <span>view all brands</span>
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </section>

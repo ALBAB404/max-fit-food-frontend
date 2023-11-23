@@ -49,7 +49,7 @@ const modules = ref([Pagination, Autoplay]);
                  <div class="blog-card">
                 <div class="blog-media">
                   <a class="blog-img" href="#">
-                    <img src="@/assets/images/blog/01.jpg" alt="blog" />
+                    <img src="@/assets/images/blog/1.png" alt="blog" />
                   </a>
                 </div>
                 <div class="blog-content">
@@ -84,7 +84,7 @@ const modules = ref([Pagination, Autoplay]);
                  <div class="blog-card">
                 <div class="blog-media">
                   <a class="blog-img" href="#">
-                    <img src="@/assets/images/blog/01.jpg" alt="blog" />
+                    <img src="@/assets/images/blog/3.png" alt="blog" />
                   </a>
                 </div>
                 <div class="blog-content">
@@ -119,7 +119,7 @@ const modules = ref([Pagination, Autoplay]);
                  <div class="blog-card">
                 <div class="blog-media">
                   <a class="blog-img" href="#">
-                    <img src="@/assets/images/blog/01.jpg" alt="blog" />
+                    <img src="@/assets/images/blog/4.png" alt="blog" />
                   </a>
                 </div>
                 <div class="blog-content">
@@ -154,7 +154,7 @@ const modules = ref([Pagination, Autoplay]);
                  <div class="blog-card">
                 <div class="blog-media">
                   <a class="blog-img" href="#">
-                    <img src="@/assets/images/blog/01.jpg" alt="blog" />
+                    <img src="@/assets/images/blog/5.png" alt="blog" />
                   </a>
                 </div>
                 <div class="blog-content">
@@ -189,7 +189,7 @@ const modules = ref([Pagination, Autoplay]);
                  <div class="blog-card">
                 <div class="blog-media">
                   <a class="blog-img" href="#">
-                    <img src="@/assets/images/blog/01.jpg" alt="blog" />
+                    <img src="@/assets/images/blog/2.png" alt="blog" />
                   </a>
                 </div>
                 <div class="blog-content">

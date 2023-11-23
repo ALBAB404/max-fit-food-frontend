@@ -1,6 +1,7 @@
 <script setup>
     const props = defineProps({
         product: Object,
+        type: String,
         required: true,
     })
 </script>
@@ -11,7 +12,7 @@
       <div class="product-media">
         <div class="product-label">
           <label class="label-text off">-{{ product.offer_percent }}%</label>
-          <label class="label-text new">new</label>
+          <label class="label-text new">{{ type }}</label>
         </div>
         <button class="product-wish wish">
           <i class="fas fa-heart"></i>

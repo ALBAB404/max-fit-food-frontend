@@ -8,7 +8,6 @@ export { default as CartSideBar } from "@/components/CartSideBar/CartSideBar.vue
 export { default as ProductView } from "@/components/Modal/ProductView.vue";
 export { default as Banner } from "@/components/Banner/Banner.vue";
 export { default as IntroPart } from "@/components/IntroPart/IntroPart.vue";
-export { default as DealsPart } from "@/components/DealsPart/DealsPart.vue";
 export { default as FeatureSection } from "@/components/Feature/FeatureSection.vue";
 export { default as PromoPart } from "@/components/PromoPart/PromoPart.vue";
 export { default as NewItem } from "@/components/NewItem/NewItem.vue";
