@@ -50,10 +50,20 @@
           <del>${{ product.mrp }}</del>
           <span>${{ product.offer_price }}</span>
         </h6>
-        <button class="product-add" title="Add to Cart">
+        <div class="row">
+        <div class="col-md-6">
+         <button class="product-add" title="Add to Cart">
           <i class="fas fa-shopping-basket"></i>
           <span>add</span>
         </button>
+        </div>
+        <div class="col-md-6">
+         <button class="product-add" title="Add to Cart">
+          <i class="fas fa-shopping-basket"></i>
+          <span>Buy Now</span>
+        </button>
+        </div>
+        </div>
         <div class="product-action">
           <button class="action-minus" title="Quantity Minus">
             <i class="icofont-minus"></i>

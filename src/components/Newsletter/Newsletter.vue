@@ -13,7 +13,7 @@
   <div>
  <section
       class="news-part"
-      style="background: url(images/newsletter.jpg) no-repeat center"
+      style="background: url(http://localhost:5173/src/assets/images/promo/home/newsletter.jpg) no-repeat center"
     >
       <div class="container">
         <div class="row align-items-center">
