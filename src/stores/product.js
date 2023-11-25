@@ -40,7 +40,9 @@ export const useProduct = defineStore('product', {
       try {
         const res = await axiosInstance.get("/recent-products");
         if (res.status === 200) {
-            this.recentProducts = res.data
+          
+            // this.recentProducts = res.data
+            this.products = res.data
           return new Promise((resolve) => {
             resolve(res.data);
           });

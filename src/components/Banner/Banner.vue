@@ -51,43 +51,20 @@ onMounted(() => {
               </div>
               <ul class="banner-category-list">
                 <li class="banner-category-item" v-for="(category, index) in categories" :key="index">
+                 <template v-if="category.sub_category.length > 0"> 
                   <a href="#">
                     <i class="flaticon-vegetable"></i>
                     <span>{{ category.name }}</span>
                   </a>
                   <div class="banner-category-dropdown">
-                    <h5>vegetables item</h5>
+                    <h5>{{ category.name }}</h5>
                     <div class="banner-sub-category">
-                      <ul>
-                        <li><a href="#">carrot</a></li>
-                        <li><a href="#">broccoli</a></li>
-                        <li><a href="#">asparagus</a></li>
-                        <li><a href="#">cauliflower</a></li>
-                        <li><a href="#">cucumber</a></li>
-                      </ul>
-                      <ul>
-                        <li><a href="#">eggplant</a></li>
-                        <li><a href="#">green pepper</a></li>
-                        <li><a href="#">lettuce</a></li>
-                        <li><a href="#">mushrooms</a></li>
-                        <li><a href="#">onion</a></li>
-                      </ul>
-                      <ul>
-                        <li><a href="#">potato</a></li>
-                        <li><a href="#">pumpkin</a></li>
-                        <li><a href="#">tomato</a></li>
-                        <li><a href="#">beetroot</a></li>
-                        <li><a href="#">zucchini</a></li>
-                      </ul>
-                      <ul>
-                        <li><a href="#">radish</a></li>
-                        <li><a href="#">artichoke</a></li>
-                        <li><a href="#">cabbage</a></li>
-                        <li><a href="#">celery</a></li>
-                        <li><a href="#">parsley</a></li>
+                      <ul v-for="(subCategory, index) in category.sub_category" :key="index">
+                        <li><a href="#">{{ subCategory.name }}</a></li>
                       </ul>
                     </div>
                   </div>
+                 </template>
                 </li>
               </ul>
             </div>
@@ -143,5 +120,14 @@ onMounted(() => {
 </template>
 
 <style>
+.banner-category-list {
+  max-height: 406px; /* Set your desired height */
+  overflow-y: auto; /* Enable vertical scrollbar when needed */
+  overflow-x: hidden; /* Enable vertical scrollbar when needed */
+}
+
+.banner-category-dropdown{
+  z-index: 999999 !important;
+}
 
 </style>

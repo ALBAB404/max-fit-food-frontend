@@ -22,12 +22,12 @@
             <button class="header-user">
               <img src="@/assets/images/user.png" alt="user" />
             </button>
-            <a href="index.html"><img src="images/logo.png" alt="logo" /></a>
+            <a href="index.html"><img src="@/assets/images/maxfit.png" alt="logo" /></a>
             <button class="header-src"><i class="fas fa-search"></i></button>
           </div>
 
           <a href="index.html" class="header-logo">
-            <img src="@/assets/images/logo.png" alt="logo" />
+            <img src="@/assets/images/maxfit.png" alt="logo" />
           </a>
 
           <form class="header-form">

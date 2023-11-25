@@ -82,7 +82,7 @@ const props = defineProps({
 
 .swiper-button-prev, .swiper-button-next{
     border-radius: 50%;
-    color: #119744;
+    color: #ff0000;
     background: #ffffff;
     line-height: 45px;
     width: 45px;
@@ -94,7 +94,7 @@ const props = defineProps({
 
 .swiper-button-prev:hover, .swiper-button-next:hover{
     border-radius: 50%;
-    background: #119744;
+    background: #ff0000;
     color: white;
 }
 </style>
